@@ -1,0 +1,27 @@
+name: Actualizar precios
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *'  # corre a las 00:00 y 12:00 UTC (cada 12h)
+  workflow_dispatch:  # botón de ejecución manual desde GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Ejecutar script
+        run: node main.js
+      - name: Guardar cambios
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add precios.csv
+          git commit -m "Actualizar precios" || echo "Sin cambios para subir"
+          git push
