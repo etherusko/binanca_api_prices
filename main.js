@@ -27,7 +27,7 @@ async function main() {
             console.log(`${symbol} →  ${price}`);
         }
         catch(error){
-            csv_file+= `${symbol}, Error, ${fecha}\n`
+            csv_file+= `${symbol}, ${error.message}, ${fecha}\n`
             console.error(symbol, '→', error.message);
         }
     }
