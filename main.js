@@ -2,12 +2,12 @@ const fs = require('fs');
 
 // Configuración: cada par define cómo se calcula su precio final
 const pares = [
-  { nombre: "BTCUSDT",  tipo: "directo", id: "bitcoin",     moneda: "usd" },
-  { nombre: "BNBUSDT",  tipo: "directo", id: "binancecoin", moneda: "usd" },
-  { nombre: "PAXGUSDT", tipo: "directo", id: "pax-gold",    moneda: "usd" },
-  { nombre: "SOLUSDT",  tipo: "directo", id: "solana",      moneda: "usd" },
-  { nombre: "USDTMXN",  tipo: "directo", id: "tether",      moneda: "mxn" },
-  { nombre: "BNBBTC",   tipo: "cruzado", idA: "binancecoin", idB: "bitcoin", moneda: "usd" },
+  { nombre: "btc",  tipo: "directo", id: "bitcoin",     moneda: "usd" },
+  { nombre: "bnb",  tipo: "directo", id: "binancecoin", moneda: "usd" },
+  { nombre: "paxg", tipo: "directo", id: "pax-gold",    moneda: "usd" },
+  { nombre: "sol",  tipo: "directo", id: "solana",      moneda: "usd" },
+  { nombre: "peso:mxn",  tipo: "directo", id: "tether",      moneda: "mxn" },
+  { nombre: "bnb/btc",   tipo: "cruzado", idA: "binancecoin", idB: "bitcoin", moneda: "usd" },
 ];
 
 // Junta automáticamente todos los IDs únicos que hace falta consultar
