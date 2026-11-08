@@ -6,6 +6,7 @@ const pares = [
   { nombre: "bnb",  tipo: "directo", id: "binancecoin", moneda: "usd" },
   { nombre: "paxg", tipo: "directo", id: "pax-gold",    moneda: "usd" },
   { nombre: "sol",  tipo: "directo", id: "solana",      moneda: "usd" },
+  { nombre: "nvdab", tipo: "directo", id: "nvidia-bstocks", moneda: "usd" },
   { nombre: "peso:mxn",  tipo: "directo", id: "tether",      moneda: "mxn" },
   { nombre: "bnb/btc",   tipo: "cruzado", idA: "binancecoin", idB: "bitcoin", moneda: "usd" },
 ];
